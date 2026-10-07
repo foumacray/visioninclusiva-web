@@ -1,0 +1,12 @@
+# Configuración local de Claude Code
+.claude/settings.local.json
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Dropbox
+.dropbox
+.dropbox.attr
+*.conflicted*

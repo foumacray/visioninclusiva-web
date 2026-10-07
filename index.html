@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VisionInclusiva · Visión por Computador e IA para la inclusión</title>
+  <meta name="description" content="VisionInclusiva: proyecto de innovación de Formación Profesional de Canarias que desarrolla soluciones de software libre basadas en visión por computador e inteligencia artificial para mejorar la autonomía de personas con discapacidad visual.">
+  <meta name="theme-color" content="#0b4a85">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Aplica tema y tamaño de texto guardados antes de pintar, para evitar parpadeos -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('vi-theme');
+        if (t === 'light' || t === 'dark' || t === 'contrast') d.setAttribute('data-theme', t);
+        var s = parseFloat(localStorage.getItem('vi-font-scale'));
+        if (s >= 0.8 && s <= 2) d.style.setProperty('--font-scale', s);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header" id="arriba">
+    <div class="a11y-bar">
+      <div class="container a11y-bar__inner" role="group" aria-label="Opciones de accesibilidad">
+        <div class="a11y-group" role="group" aria-labelledby="lbl-texto">
+          <span class="a11y-label" id="lbl-texto">Texto</span>
+          <button type="button" class="a11y-btn" data-font="down" aria-label="Reducir tamaño del texto">A−</button>
+          <button type="button" class="a11y-btn" data-font="reset" aria-label="Tamaño de texto normal">A</button>
+          <button type="button" class="a11y-btn" data-font="up" aria-label="Aumentar tamaño del texto">A+</button>
+        </div>
+        <div class="a11y-group" role="group" aria-labelledby="lbl-tema">
+          <span class="a11y-label" id="lbl-tema">Tema</span>
+          <button type="button" class="a11y-btn" data-theme-set="light" aria-pressed="false">Claro</button>
+          <button type="button" class="a11y-btn" data-theme-set="dark" aria-pressed="false">Oscuro</button>
+          <button type="button" class="a11y-btn" data-theme-set="contrast" aria-pressed="false">Alto contraste</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container header-main">
+      <a class="brand" href="#inicio">
+        <svg class="brand__icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <path d="M4 24c5-9 12-14 20-14s15 5 20 14c-5 9-12 14-20 14S9 33 4 24z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+          <circle cx="24" cy="24" r="7.5" fill="currentColor"/>
+          <circle cx="26.5" cy="21.5" r="2.4" fill="var(--bg)"/>
+        </svg>
+        <span class="brand__text">Vision<strong>Inclusiva</strong></span>
+      </a>
+
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span>Menú</span>
+      </button>
+
+      <nav class="site-nav" aria-label="Secciones de la página">
+        <ul id="menu-principal">
+          <li><a href="#proyecto">El proyecto</a></li>
+          <li><a href="#participantes">Participantes</a></li>
+          <li><a href="#ods">ODS</a></li>
+          <li><a href="#plan">Plan de trabajo</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#difusion">Difusión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ============ INICIO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">Proyecto de innovación tecnológica · FP Canarias</p>
+          <h1 id="titulo-principal">Vision<span class="accent-word">Inclusiva</span></h1>
+          <p class="hero__subtitle">Eliminación de barreras mediante visión por computador e inteligencia artificial.</p>
+          <p class="lead">Desarrollamos soluciones de <strong>software libre</strong> que mejoran la autonomía y la integración cotidiana de personas con discapacidad, con prioridad para quienes tienen <strong>baja visión o ceguera</strong>.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#proyecto">Conoce el proyecto</a>
+            <a class="btn btn--ghost" href="#participantes">Quiénes participan</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <img src="logos/visionInclusiva.png" width="524" height="699" fetchpriority="high"
+               alt="Logo de VisionInclusiva: un ojo con una red neuronal en el iris, rodeado de personas de colores, y el lema «Tecnología para la accesibilidad»">
+        </div>
+      </div>
+
+      <div class="container">
+        <dl class="facts">
+          <div class="fact">
+            <dt>Modalidad</dt>
+            <dd>Proyecto de innovación tecnológica y científica (Curso de Especialización)</dd>
+          </div>
+          <div class="fact">
+            <dt>Familia profesional</dt>
+            <dd>Informática y Comunicaciones</dd>
+          </div>
+          <div class="fact">
+            <dt>Periodo de ejecución</dt>
+            <dd><time datetime="2026-09-01">1 de septiembre de 2026</time> – <time datetime="2027-06-30">30 de junio de 2027</time></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ EL PROYECTO ============ -->
+    <section class="section" id="proyecto" aria-labelledby="h-proyecto">
+      <div class="container">
+        <p class="eyebrow">El proyecto</p>
+        <h2 id="h-proyecto">Tecnología al servicio de la autonomía</h2>
+        <div class="prose">
+          <p><strong>VisionInclusiva</strong> es una iniciativa de innovación tecnológica orientada a la transformación digital y la inclusión social mediante inteligencia artificial y visión por computador.</p>
+          <p>El proyecto une a tres centros de Formación Profesional de Canarias y a una entidad del sector social, lo que garantiza la transferencia de conocimiento y la replicabilidad de las soluciones desarrolladas.</p>
+        </div>
+
+        <div class="goal">
+          <h3>Objetivo general</h3>
+          <p>Diseñar e implementar soluciones tecnológicas basadas en visión por computador para mejorar la calidad de vida y la autonomía de personas con discapacidad visual.</p>
+        </div>
+
+        <h3 class="subhead">Objetivos específicos</h3>
+        <ol class="objectives">
+          <li><span class="objectives__title">Diagnosticar</span> necesidades reales de accesibilidad en entornos cotidianos y sanitarios, en colaboración con entidades especializadas.</li>
+          <li><span class="objectives__title">Captar, curar y etiquetar</span> datos para el entrenamiento de modelos de inteligencia artificial adaptados.</li>
+          <li><span class="objectives__title">Diseñar prototipos físicos</span> e integrar los sistemas de IA en hardware portátil de bajo coste.</li>
+          <li><span class="objectives__title">Validar técnicamente</span> las soluciones en condiciones reales, recabando la opinión de las personas usuarias.</li>
+          <li><span class="objectives__title">Garantizar la trazabilidad, la replicabilidad y la transferencia</span> mediante documentación técnica detallada y software de código abierto.</li>
+          <li><span class="objectives__title">Difundir</span> las actividades y resultados en entornos educativos.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PARTICIPANTES ============ -->
+    <section class="section section--alt" id="participantes" aria-labelledby="h-participantes">
+      <div class="container">
+        <p class="eyebrow">Participantes y entidades colaboradoras</p>
+        <h2 id="h-participantes">Una alianza entre la FP y el sector social</h2>
+
+        <ul class="partners">
+          <li class="partner partner--lead">
+            <div class="partner__logo">
+              <img src="logos/ieslomodelaherradura.png" width="744" height="189" loading="lazy" alt="Logo del IES Lomo de La Herradura y de Aula del Futuro">
+            </div>
+            <p class="partner__role-tag">Centro coordinador</p>
+            <h3 class="partner__name">IES Lomo de La Herradura</h3>
+            <dl class="partner__meta">
+              <dt>Coordinación</dt>
+              <dd><strong>Pedro Antonio Marín Reyes</strong><br>Especialidad de Informática, Departamento de Informática y Comunicaciones. Doctor e investigador especializado en inteligencia artificial y visión por computador.</dd>
+              <dt>Rol</dt>
+              <dd>Planificación, dirección técnica, supervisión general del proyecto y desarrollo de los modelos de inteligencia artificial y visión por computador.</dd>
+            </dl>
+          </li>
+
+          <li class="partner">
+            <div class="partner__logo">
+              <img src="logos/logo%20gris%20primero.png" width="257" height="69" loading="lazy" alt="Logo del IES Primero de Mayo">
+            </div>
+            <p class="partner__role-tag">Centro colaborador</p>
+            <h3 class="partner__name">IES Primero de Mayo</h3>
+            <dl class="partner__meta">
+              <dt>Coordinación</dt>
+              <dd><strong>Ramón Sebastián Torrente Jiménez</strong><br>Especialidad de Procedimientos Sanitarios y Asistenciales, Departamento de Sanidad.</dd>
+              <dt>Rol</dt>
+              <dd>Definición de casos de uso del ámbito sanitario, recogida de datos y retroalimentación en un entorno real (<i lang="en">living lab</i>), e impulso de la difusión.</dd>
+            </dl>
+          </li>
+
+          <li class="partner">
+            <div class="partner__logo">
+              <img src="logos/cruzdepiedra-recorte.png" width="201" height="75" loading="lazy" alt="Logo del CIFP Cruz de Piedra, Las Palmas de Gran Canaria">
+            </div>
+            <p class="partner__role-tag">Centro colaborador</p>
+            <h3 class="partner__name">CIFP Cruz de Piedra</h3>
+            <dl class="partner__meta">
+              <dt>Coordinación</dt>
+              <dd><strong>Francisco Mario Rivero Jiménez</strong><br>Especialidad de Administración de Empresas, Departamento de Administración y Gestión.</dd>
+              <dt>Rol</dt>
+              <dd>Gestión administrativa, análisis estadístico del impacto, organización de eventos y supervisión del cumplimiento normativo en protección de datos.</dd>
+            </dl>
+          </li>
+
+          <li class="partner">
+            <div class="partner__logo partner__logo--tall">
+              <img src="logos/proinclusiva-recorte.png" width="384" height="502" loading="lazy" alt="Logo de Pro Inclusiva, acción social canaria">
+            </div>
+            <p class="partner__role-tag">Entidad colaboradora</p>
+            <h3 class="partner__name">Asociación Pro inclusiva Acción Social Canaria <span class="partner__alias">(Pro Inclusiva)</span></h3>
+            <dl class="partner__meta">
+              <dt>Rol</dt>
+              <dd>Asesoramiento experto en accesibilidad y eliminación de barreras. Actúa como entorno de pruebas y validación en contexto real con personas usuarias con discapacidad visual, y participa en la difusión y la transferencia social.</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ODS Y ÁREAS ============ -->
+    <section class="section" id="ods" aria-labelledby="h-ods">
+      <div class="container">
+        <p class="eyebrow">Alineación estratégica</p>
+        <h2 id="h-ods">Objetivos de Desarrollo Sostenible y áreas prioritarias</h2>
+
+        <h3 class="subhead">Objetivos de Desarrollo Sostenible (ODS)</h3>
+        <ul class="ods-grid">
+          <li class="ods" style="--ods: #4c9f38"><span class="ods__num"><span class="visually-hidden">ODS </span>3</span><span class="ods__name">Salud y bienestar</span></li>
+          <li class="ods" style="--ods: #c5192d"><span class="ods__num"><span class="visually-hidden">ODS </span>4</span><span class="ods__name">Educación de calidad</span></li>
+          <li class="ods" style="--ods: #a21942"><span class="ods__num"><span class="visually-hidden">ODS </span>8</span><span class="ods__name">Trabajo decente y crecimiento económico</span></li>
+          <li class="ods" style="--ods: #fd6925"><span class="ods__num"><span class="visually-hidden">ODS </span>9</span><span class="ods__name">Industria, innovación e infraestructura</span></li>
+          <li class="ods" style="--ods: #dd1367"><span class="ods__num"><span class="visually-hidden">ODS </span>10</span><span class="ods__name">Reducción de las desigualdades</span></li>
+          <li class="ods" style="--ods: #19486a"><span class="ods__num"><span class="visually-hidden">ODS </span>17</span><span class="ods__name">Alianzas para lograr los objetivos</span></li>
+        </ul>
+
+        <h3 class="subhead">Áreas prioritarias de innovación</h3>
+        <ul class="areas">
+          <li>Transformación digital y tecnologías emergentes.</li>
+          <li>Sectores estratégicos para el desarrollo territorial: salud y bienestar.</li>
+          <li>Emprendimiento e innovación con impacto económico y social.</li>
+          <li>Igualdad, inclusión y reducción de la brecha de género en STEAM.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PLAN DE TRABAJO ============ -->
+    <section class="section section--alt" id="plan" aria-labelledby="h-plan">
+      <div class="container">
+        <p class="eyebrow">Plan de trabajo y temporalización</p>
+        <h2 id="h-plan">Cinco fases, de septiembre de 2026 a junio de 2027</h2>
+
+        <div class="months" aria-hidden="true">
+          <span>Sep</span><span>Oct</span><span>Nov</span><span>Dic</span><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span>
+        </div>
+
+        <ol class="phases">
+          <li class="phase" data-start="2026-09-01" data-end="2026-10-31">
+            <div class="phase__bar" style="--from: 1; --to: 2" aria-hidden="true"><span></span></div>
+            <div class="phase__head">
+              <h3><span class="phase__num">Fase 1</span> Inicio y coordinación</h3>
+              <p class="phase__dates">Septiembre – octubre <span class="phase__status"></span></p>
+            </div>
+            <ul>
+              <li>Presentación del proyecto e inicio de la web oficial.</li>
+              <li>Reuniones de coordinación y planificación técnica entre todos los participantes.</li>
+            </ul>
+          </li>
+          <li class="phase" data-start="2026-10-01" data-end="2026-12-31">
+            <div class="phase__bar" style="--from: 2; --to: 4" aria-hidden="true"><span></span></div>
+            <div class="phase__head">
+              <h3><span class="phase__num">Fase 2</span> Análisis</h3>
+              <p class="phase__dates">Octubre – diciembre <span class="phase__status"></span></p>
+            </div>
+            <ul>
+              <li>Identificación del alcance del problema y de las necesidades de las personas usuarias.</li>
+              <li>Revisión de publicaciones científicas y del estado del arte en visión por computador.</li>
+            </ul>
+          </li>
+          <li class="phase" data-start="2026-12-01" data-end="2027-04-30">
+            <div class="phase__bar" style="--from: 4; --to: 8" aria-hidden="true"><span></span></div>
+            <div class="phase__head">
+              <h3><span class="phase__num">Fase 3</span> Desarrollo</h3>
+              <p class="phase__dates">Diciembre – abril <span class="phase__status"></span></p>
+            </div>
+            <ul>
+              <li>Recolección, curado y etiquetado de conjuntos de datos.</li>
+              <li>Entrenamiento, optimización y ajuste de parámetros de los modelos de IA.</li>
+              <li>Construcción de prototipos portátiles e integración del software en hardware embebido.</li>
+              <li>Pruebas preliminares de funcionamiento y reuniones técnicas de seguimiento.</li>
+            </ul>
+          </li>
+          <li class="phase" data-start="2027-02-01" data-end="2027-05-31">
+            <div class="phase__bar" style="--from: 6; --to: 9" aria-hidden="true"><span></span></div>
+            <div class="phase__head">
+              <h3><span class="phase__num">Fase 4</span> Evaluación</h3>
+              <p class="phase__dates">Febrero – mayo <span class="phase__status"></span></p>
+            </div>
+            <ul>
+              <li>Pruebas de validación en entornos reales con la entidad colaboradora y las personas usuarias.</li>
+              <li>Análisis cualitativo y cuantitativo de resultados.</li>
+              <li>Elaboración de materiales para foros técnicos y publicaciones científicas.</li>
+            </ul>
+          </li>
+          <li class="phase" data-start="2027-05-01" data-end="2027-06-30">
+            <div class="phase__bar" style="--from: 9; --to: 10" aria-hidden="true"><span></span></div>
+            <div class="phase__head">
+              <h3><span class="phase__num">Fase 5</span> Difusión y transferencia</h3>
+              <p class="phase__dates">Mayo – junio <span class="phase__status"></span></p>
+            </div>
+            <ul>
+              <li>Publicación de los modelos en repositorios de código abierto.</li>
+              <li>Difusión en eventos educativos, jornadas de innovación y artículos científicos.</li>
+              <li>Evaluación mediante encuestas de satisfacción y entrega de la memoria final.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ RESULTADOS ============ -->
+    <section class="section" id="resultados" aria-labelledby="h-resultados">
+      <div class="container">
+        <p class="eyebrow">Resultados previstos</p>
+        <h2 id="h-resultados">Lo que dejará el proyecto</h2>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Resultados tangibles</h3>
+            <ul class="check-list">
+              <li>Prototipos funcionales basados en visión por computador que facilitan tareas diarias a personas con discapacidad visual.</li>
+              <li>Modelos de inteligencia artificial entrenados, publicados en código abierto para garantizar su uso libre y su replicabilidad.</li>
+              <li>Publicaciones en congresos o revistas científicas de impacto.</li>
+              <li>Guías técnicas, esquemas de diseño, materiales divulgativos y cuestionarios de impacto cualitativo.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Resultados intangibles</h3>
+            <ul class="check-list">
+              <li>Capacitación avanzada del profesorado implicado en áreas emergentes como la inteligencia artificial y el Big Data.</li>
+              <li>Sensibilización de la comunidad educativa sobre la accesibilidad y la eliminación de barreras.</li>
+              <li>Impulso de la interdisciplinariedad entre las familias de Informática, Sanidad y Administración.</li>
+              <li>Fomento de vocaciones STEAM, con un enfoque directo en la reducción de la brecha de género.</li>
+              <li>Sinergias y alianzas sostenibles entre los centros de Formación Profesional y el sector social.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIFUSIÓN ============ -->
+    <section class="section section--alt" id="difusion" aria-labelledby="h-difusion">
+      <div class="container">
+        <p class="eyebrow">Difusión y transferencia</p>
+        <h2 id="h-difusion">Conocimiento abierto y compartido</h2>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Estrategias de difusión</h3>
+            <ul class="check-list">
+              <li>Sitio web del proyecto e integración en los portales institucionales de los centros.</li>
+              <li>Publicaciones periódicas en redes sociales con la etiqueta <span class="hashtag">#InnovaFpCan</span>.</li>
+              <li>Difusión en medios de comunicación locales y notas informativas.</li>
+              <li>Exhibición de soluciones y participación en eventos como <i>Canarias Skills</i> o jornadas de innovación educativa.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Transferencia de conocimiento</h3>
+            <ul class="check-list">
+              <li>Repositorios de código abierto con los algoritmos y las redes neuronales optimizadas.</li>
+              <li>Planos e instrucciones públicas para construir los prototipos físicos.</li>
+              <li>Artículos en actas de congresos y revistas científicas con revisión por pares.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="tag-callout">Síguenos en redes con <span class="hashtag hashtag--big">#InnovaFpCan</span></p>
+        <!-- TODO: añadir enlaces a redes sociales y correo de contacto del proyecto cuando estén disponibles -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2 class="visually-hidden">Información del sitio</h2>
+      <ul class="footer-logos" aria-label="Instituciones participantes">
+        <li><img src="logos/ieslomodelaherradura.png" width="744" height="189" loading="lazy" alt="IES Lomo de La Herradura"></li>
+        <li><img src="logos/logo%20gris%20primero.png" width="257" height="69" loading="lazy" alt="IES Primero de Mayo"></li>
+        <li><img src="logos/cruzdepiedra-recorte.png" width="201" height="75" loading="lazy" alt="CIFP Cruz de Piedra"></li>
+        <li><img src="logos/proinclusiva-recorte.png" width="384" height="502" loading="lazy" alt="Pro Inclusiva, acción social canaria"></li>
+      </ul>
+
+      <div class="footer-network">
+        <p class="footer-network__label">En el marco de</p>
+        <img src="logos/redes.png" width="500" height="175" loading="lazy" alt="Redes de las Enseñanzas Profesionales">
+      </div>
+
+      <div class="footer-bottom">
+        <p><strong>VisionInclusiva</strong> · Proyecto de innovación tecnológica y científica de Formación Profesional de Canarias · Curso 2026–2027</p>
+        <!-- TODO: confirmar licencia definitiva del contenido -->
+        <p>Contenido bajo licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license">Creative Commons BY-SA 4.0</a>. Software publicado como código abierto.</p>
+        <p><a class="back-top" href="#arriba">Volver arriba <span aria-hidden="true">↑</span></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

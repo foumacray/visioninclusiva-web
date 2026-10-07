@@ -1,0 +1,279 @@
+# VisionInclusiva: Eliminación de Barreras mediante Visión por Computador e Inteligencia Artificial
+
+## Resumen del Proyecto
+
+**VisionInclusiva** es una iniciativa de innovación tecnológica orientada a la transformación digital y la inclusión social mediante Inteligencia Artificial (IA) y visión por computador. Su objetivo principal es desarrollar soluciones tecnológicas de software libre para mejorar la autonomía e integración cotidiana de personas con discapacidad, priorizando a quienes sufren de déficit o nula visión.
+
+El proyecto articula el trabajo conjunto de tres centros docentes de Formación Profesional de Canarias y una entidad del sector social, garantizando la transferencia de conocimiento y la replicabilidad de las soluciones desarrolladas.
+
+---
+
+## Datos Generales
+
+* **Título del Proyecto:** VisionInclusiva: Eliminación de Barreras mediante Visión por Computador e Inteligencia Artificial.
+
+
+* **Modalidad:** Proyectos de innovación tecnológica y científica (Curso de Especialización).
+
+
+* **Familia Profesional Principal:** Informática y Comunicaciones.
+
+
+* **Periodo de Ejecución:** 1 de septiembre de 2026 – 30 de junio de 2027.
+
+
+
+---
+
+## Participantes y Entidades Colaboradoras
+
+### Centro Coordinador
+
+* **IES Lomo de La Herradura**
+
+* **Persona Coordinadora:** Pedro Antonio Marín Reyes (Especialidad en Informática, Departamento de Informática y Comunicaciones). Doctor e investigador especializado en Inteligencia Artificial y Visión por Computador.
+
+
+* **Rol y Responsabilidades:** Planificación, dirección técnica, supervisión general del proyecto y desarrollo de los modelos de inteligencia artificial y visión por computador.
+
+
+
+
+
+### Centros Colaboradores
+
+* **IES Primero de Mayo**
+
+* **Persona Coordinadora:** Ramón Sebastián Torrente Jiménez (Especialidad en Procedimientos Sanitarios y Asistenciales, Departamento de Sanidad).
+
+
+* **Rol y Responsabilidades:** Definición de casos de uso del ámbito sanitario, recogida de datos y retroalimentación en un entorno real (*living lab*), e impulso de las tareas de difusión.
+
+
+
+
+* **CIFP Cruz de Piedra**
+
+* **Persona Coordinadora:** Jocelyn Sarmiento Suárez (Especialidad en Administración de Empresas, Departamento de Administración y Gestión).
+
+
+* **Rol y Responsabilidades:** Gestión administrativa, análisis estadístico de impacto del proyecto, organización de eventos y supervisión del cumplimiento normativo de protección de datos.
+
+
+
+
+
+### Entidad Colaboradora
+
+* **Asociación Pro inclusiva Acción Social Canaria (Pro Inclusiva)**
+
+* **Rol y Responsabilidades:** Asesoramiento experto en accesibilidad y eliminación de barreras. Actúa como entorno de pruebas y validación en contexto real con usuarios finales con discapacidad visual, participando además en la difusión y transferencia social.
+
+
+
+
+
+---
+
+## Alineación con ODS y Áreas Prioritarias
+
+* **Áreas Prioritarias de Innovación:**
+* Transformación digital y tecnologías emergentes.
+
+
+* Sectores estratégicos para el desarrollo territorial (Salud y Bienestar).
+
+
+* Emprendimiento e innovación con impacto económico y social.
+
+
+* Igualdad, inclusión y reducción de la brecha de género en STEAM.
+
+
+
+
+* **Objetivos de Desarrollo Sostenible (ODS):**
+* ODS 3: Salud y Bienestar.
+
+
+* ODS 4: Educación de Calidad.
+
+
+* ODS 8: Trabajo Decente y Crecimiento Económico.
+
+
+* ODS 9: Industria, Innovación e Infraestructura.
+
+
+* ODS 10: Reducción de las Desigualdades.
+
+
+* ODS 17: Alianzas para Lograr los Objetivos.
+
+
+
+
+
+---
+
+## Objetivos del Proyecto
+
+* **Objetivo General:**
+* Diseñar e implementar soluciones tecnológicas basadas en visión por computador para la mejora de la calidad de vida y autonomía de personas con discapacidad visual.
+
+
+
+
+* **Objetivos Específicos:**
+* Diagnosticar necesidades reales de accesibilidad en entornos cotidianos y sanitarios en colaboración con entidades especializadas.
+
+
+* Realizar la captación, curado y etiquetado de datos para el entrenamiento de modelos de inteligencia artificial adaptados.
+
+
+* Diseñar prototipos físicos e integrar los sistemas de IA en hardware portable de bajo coste.
+
+
+* Validar técnicamente las soluciones en condiciones reales recabando opiniones de usuarios finales.
+
+
+* Garantizar la trazabilidad, replicabilidad y transferencia mediante documentación técnica detallada y software de código abierto.
+
+
+* Difundir las actividades y resultados tanto en entornos educativos como en congresos o publicaciones científicas de impacto.
+
+
+
+
+
+---
+
+## Plan de Trabajo y Temporalización
+
+* **Fase 1: Inicio y Coordinación (Septiembre - Octubre)**
+
+* Presentación del proyecto e inicio de la web oficial.
+
+
+* Reuniones de coordinación y planificación técnica entre todos los participantes.
+
+
+
+
+* **Fase 2: Análisis (Octubre - Diciembre)**
+
+* Identificación del alcance del problema y de las necesidades de los usuarios.
+
+
+* Revisión de publicaciones científicas y estado del arte en visión por computador.
+
+
+
+
+* **Fase 3: Desarrollo (Diciembre - Abril)**
+
+* Recolección, curado y etiquetado de conjuntos de datos.
+
+
+* Entrenamiento, optimización y ajuste de parámetros de modelos de IA.
+
+
+* Construcción de prototipos portátiles e integración del software en hardware embebido.
+
+
+* Pruebas preliminares de funcionamiento y reuniones técnicas de seguimiento.
+
+
+
+
+* **Fase 4: Evaluación (Febrero - Mayo)**
+
+* Pruebas de validación en entornos reales con la entidad colaboradora y usuarios finales.
+
+
+* Análisis cualitativo y cuantitativo de resultados.
+
+
+* Elaboración de materiales para foros técnicos y publicaciones científicas.
+
+
+
+
+* **Fase 5: Difusión y Transferencia (Mayo - Junio)**
+
+* Publicación de modelos en repositorios de código abierto.
+
+
+* Difusión del proyecto en eventos educativos, jornadas de innovación y artículos científicos.
+
+
+* Evaluación mediante encuestas de satisfacción y entrega de la memoria final.
+
+
+
+
+
+---
+
+## Resultados Previstos
+
+### Resultados Tangibles
+
+* Prototipos funcionales basados en visión por computador orientados a facilitar tareas diarias a personas con discapacidad visual.
+
+
+* Publicación en código abierto de los modelos de inteligencia artificial entrenados para garantizar su uso libre y replicabilidad.
+
+
+* Publicaciones en congresos o revistas científicas de impacto.
+
+
+* Guías técnicas, esquemas de diseño, materiales divulgativos y cuestionarios de impacto cualitativo.
+
+
+
+### Resultados Intangibles
+
+* Capacitación avanzada de los docentes implicados en áreas emergentes como Inteligencia Artificial y Big Data.
+
+
+* Sensibilización de la comunidad educativa hacia la accesibilidad y la eliminación de barreras para personas con discapacidad.
+
+
+* Impulso de la interdisciplinariedad entre las familias de Informática, Sanidad y Administración.
+
+
+* Fomento de vocaciones STEAM con un enfoque directo en la reducción de la brecha de género.
+
+
+* Creación de sinergias y alianzas sostenibles entre los centros de Formación Profesional y el sector social.
+
+
+
+---
+
+## Plan de Difusión y Transferencia
+
+* **Estrategias de Difusión:**
+* Sitio web del proyecto e integración en los portales institucionales de los centros docentes.
+
+
+* Publicaciones periódicas en redes sociales con la etiqueta `#InnovaFpCan`.
+
+
+* Difusión en medios de comunicación locales y notas informativas.
+
+
+* Exhibición de soluciones y participación en eventos como la competición *Canarias Skills* o jornadas de innovación educativa.
+
+
+
+
+* **Mecanismos de Transferencia de Conocimiento:**
+* Liberación de repositorios de código abierto con los algoritmos y redes neuronales optimizados.
+
+
+* Disponibilidad pública de planos e instrucciones para la construcción de los prototipos físicos.
+
+
+* Publicación de artículos en actas de congresos y revistas científicas sujetas a revisión por pares.

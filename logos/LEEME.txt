@@ -1,0 +1,17 @@
+LOGOS DE LA WEB
+===============
+
+Archivos que usa index.html (si cambias el nombre de alguno, actualiza también index.html):
+
+  visionInclusiva.png          Logo del proyecto (portada)
+  ieslomodelaherradura.png     IES Lomo de La Herradura (tarjeta y pie)
+  logo gris primero.png        IES Primero de Mayo (tarjeta y pie)
+  cruzdepiedra-recorte.png     CIFP Cruz de Piedra (copia recortada de cruzdepiedra.png)
+  proinclusiva-recorte.png     Pro Inclusiva (copia recortada de proinclusiva.png)
+  redes.png                    Redes de las Enseñanzas Profesionales (pie)
+
+Sin usar por ahora: cruzdepiedra.png y proinclusiva.png (originales),
+red_innovacion.jpg (solo el icono).
+
+Para sustituir un logo, basta con reemplazar el archivo manteniendo el mismo nombre.
+Los logos se muestran siempre sobre fondo blanco, también en los temas oscuro y alto contraste.
