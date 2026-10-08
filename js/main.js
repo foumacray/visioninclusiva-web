@@ -133,6 +133,81 @@
     updateCurrent();
   }
 
+  /* ---------- Carrusel de noticias ---------- */
+  document.querySelectorAll('[data-carousel]').forEach(function (box) {
+    var track = box.querySelector('.news-track');
+    var items = track ? Array.prototype.slice.call(track.children) : [];
+    if (items.length < 2) return;
+
+    box.classList.add('is-enhanced');
+    box.setAttribute('role', 'region');
+    box.setAttribute('aria-roledescription', 'carrusel');
+    box.setAttribute('aria-label', 'Noticias del proyecto');
+    items.forEach(function (it, i) {
+      it.setAttribute('role', 'group');
+      it.setAttribute('aria-roledescription', 'diapositiva');
+      it.setAttribute('aria-label', (i + 1) + ' de ' + items.length);
+    });
+
+    var controls = document.createElement('div');
+    controls.className = 'news-controls';
+    controls.innerHTML =
+      '<button type="button" class="news-btn" data-dir="-1">Anterior</button>' +
+      '<button type="button" class="news-btn" data-dir="1">Siguiente</button>' +
+      '<p class="news-status" aria-live="polite"></p>';
+    box.appendChild(controls);
+
+    var prev = controls.querySelector('[data-dir="-1"]');
+    var next = controls.querySelector('[data-dir="1"]');
+    var status = controls.querySelector('.news-status');
+    var announce = false;
+
+    // Primera noticia que no está completamente a la izquierda de la vista
+    function firstVisible() {
+      var left = track.scrollLeft;
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].offsetLeft + items[i].offsetWidth / 2 > left) return i;
+      }
+      return items.length - 1;
+    }
+
+    function update() {
+      var i = firstVisible();
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      // Si caben todas las noticias, los controles sobran
+      controls.hidden = maxScroll <= 1;
+      prev.disabled = track.scrollLeft <= 1;
+      next.disabled = track.scrollLeft >= maxScroll - 1;
+      var shown = 0;
+      items.forEach(function (it) {
+        var vis = it.offsetLeft + it.offsetWidth > track.scrollLeft + 4 &&
+                  it.offsetLeft < track.scrollLeft + track.clientWidth - 4;
+        if (vis) shown++;
+        // Las noticias fuera de vista no reciben foco ni se leen
+        if (vis) it.removeAttribute('inert'); else it.setAttribute('inert', '');
+      });
+      var text = 'Noticia ' + (i + 1) + ' de ' + items.length;
+      if (shown > 1) text = 'Noticias ' + (i + 1) + '–' + Math.min(i + shown, items.length) + ' de ' + items.length;
+      status.textContent = announce ? text : '';
+      if (!announce) status.setAttribute('data-text', text);
+    }
+
+    function go(dir) {
+      announce = true;
+      var target = Math.max(0, Math.min(items.length - 1, firstVisible() + dir));
+      track.scrollTo({ left: items[target].offsetLeft, behavior: 'auto' });
+      // 'auto' respeta scroll-behavior de CSS (suave salvo movimiento reducido)
+      update();
+    }
+
+    prev.addEventListener('click', function () { go(-1); });
+    next.addEventListener('click', function () { go(1); });
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+    status.textContent = status.getAttribute('data-text') || '';
+  });
+
   /* ---------- Estado de las fases según la fecha actual ---------- */
   var today = new Date();
   document.querySelectorAll('.phase[data-start][data-end]').forEach(function (phase) {

@@ -1,0 +1,1 @@
+Perarar una sección donde se vean las noticas del proyecto estilo carrusel con información de la acción desarrollada. Esto debería inclusirse en el menú principal

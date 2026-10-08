@@ -764,11 +764,81 @@ main:focus { outline: none; }
   font-weight: 700;
 }
 
+/* ---------- Noticias (carrusel) ---------- */
+.news { margin-top: 2rem; }
+.news-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+.news-item {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+.news-item h3 { margin-top: 0.25rem; }
+.news-item__meta { margin: 0; font-weight: 700; color: var(--text-muted); }
+.news-item__action {
+  margin-bottom: 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+.news-item__label { font-weight: 700; color: var(--primary); }
+
+.news.is-enhanced .news-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  padding: 0.5rem 0 1rem;
+}
+.news.is-enhanced .news-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+@media (min-width: 52rem) {
+  .news.is-enhanced .news-item { flex-basis: calc((100% - 1.25rem) / 2); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .news.is-enhanced .news-track { scroll-behavior: smooth; }
+}
+
+.news-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.news-controls[hidden] { display: none; }
+.news-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.4rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.news-btn:hover:not(:disabled) { background: var(--surface-alt); }
+.news-btn:disabled { opacity: 0.6; cursor: default; }
+.news-status { margin: 0 0 0 auto; font-weight: 700; color: var(--text-muted); }
+
 /* ---------- Impresión ---------- */
 @media print {
   .a11y-bar, .menu-toggle, .site-nav, .skip-link, .back-top { display: none !important; }
   .site-header { position: static; }
   body { background: #fff; color: #000; }
   .section, .hero { padding-block: 1.5rem; }
-  .panel, .phase, .partner, .ods, .objectives li, .fact { box-shadow: none; break-inside: avoid; }
+  .news-controls { display: none !important; }
+  .news.is-enhanced .news-track { display: grid; overflow: visible; }
+  .panel, .phase, .partner, .ods, .objectives li, .fact, .news-item { box-shadow: none; break-inside: avoid; }
 }
